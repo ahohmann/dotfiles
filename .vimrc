@@ -23,7 +23,7 @@ Plugin 'tpope/vim-surround'
 Plugin 'tommcdo/vim-exchange'
 Plugin 'mileszs/ack.vim'
 Plugin 'altercation/vim-colors-solarized'
-"Plugin 'Valloric/YouCompleteMe'
+Plugin 'Valloric/YouCompleteMe'
 
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
@@ -47,6 +47,7 @@ colorscheme solarized
 
 set number
 set expandtab shiftwidth=2 softtabstop=2
+set hidden
 
 "Switch on incremental and highlighted search.
 set incsearch ignorecase smartcase hlsearch
@@ -67,8 +68,21 @@ nnoremap <C-w>\| <c-w>v
 nnoremap <c-q> vipgq
 inoremap <c-q> <esc>vipgq
 
-nnoremap <leader>ev :vsplit $MYVIMRC<cr>
+nnoremap <leader>ev :edit $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
 
 set statusline=%F[%{strlen(&fenc)?&fenc:'none'},%{&ff}]%h%m%r%y%=%c,%l/%L\ %P
+
+let g:EclimCompletionMethod = 'omnifunc'
+nnoremap <leader>jo :JavaImport<cr>
+vnoremap <leader>jo :JavaImport<cr>
+nnoremap <leader>jc :JavaConstructor<cr>
+vnoremap <leader>jc :JavaConstructor<cr>
+nnoremap <leader>jr :JavaRename 
+vnoremap <leader>jr :JavaRename 
+nnoremap <leader>jx :Java<cr>
+nnoremap <leader>jg :JavaGet<cr>
+vnoremap <leader>jg :JavaGet<cr>
+nnoremap <leader>js :JavaGetSet<cr>
+vnoremap <leader>js :JavaGetSet<cr>
 
