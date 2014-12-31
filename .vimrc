@@ -20,6 +20,8 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-unimpaired'
 Plugin 'tpope/vim-abolish'
 Plugin 'tpope/vim-surround'
+Plugin 'terryma/vim-expand-region'
+Plugin 'bling/vim-airline'
 Plugin 'tommcdo/vim-exchange'
 Plugin 'mileszs/ack.vim'
 Plugin 'altercation/vim-colors-solarized'
@@ -71,7 +73,7 @@ inoremap <c-q> <esc>vipgq
 nnoremap <leader>ev :edit $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
 
-set statusline=%F[%{strlen(&fenc)?&fenc:'none'},%{&ff}]%h%m%r%y%=%c,%l/%L\ %P
+"set statusline=%F[%{strlen(&fenc)?&fenc:'none'},%{&ff}]%h%m%r%y%=%c,%l/%L\ %P
 
 let g:EclimCompletionMethod = 'omnifunc'
 nnoremap <leader>jo :JavaImport<cr>
