@@ -34,7 +34,7 @@ let g:UltiSnipsJumpForwardTrigger="<c-j>"
 let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 let g:UltiSnipsEditSplit="vertical"
 
-nnoremap <leader>nt :NERDTree<cr>
+noremap <leader>nt :NERDTree<cr>
 
 call vundle#end()
 filetype plugin indent on
@@ -76,15 +76,11 @@ nnoremap <leader>sv :source $MYVIMRC<cr>
 "set statusline=%F[%{strlen(&fenc)?&fenc:'none'},%{&ff}]%h%m%r%y%=%c,%l/%L\ %P
 
 let g:EclimCompletionMethod = 'omnifunc'
-nnoremap <leader>jo :JavaImport<cr>
-vnoremap <leader>jo :JavaImport<cr>
-nnoremap <leader>jc :JavaConstructor<cr>
-vnoremap <leader>jc :JavaConstructor<cr>
-nnoremap <leader>jr :JavaRename 
-vnoremap <leader>jr :JavaRename 
-nnoremap <leader>jx :Java<cr>
-nnoremap <leader>jg :JavaGet<cr>
-vnoremap <leader>jg :JavaGet<cr>
-nnoremap <leader>js :JavaGetSet<cr>
-vnoremap <leader>js :JavaGetSet<cr>
+noremap <leader>jr :JavaRename 
+noremap <leader>jx :Java<cr>
+noremap <leader>ji :JavaImport<cr>
+noremap <leader>jio :JavaImportOrganize<cr>
+noremap <leader>jgc :JavaConstructor<cr>
+noremap <leader>jgg :JavaGet<cr>
+noremap <leader>jgs :JavaGetSet<cr>
 
