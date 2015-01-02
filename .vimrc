@@ -24,6 +24,7 @@ Plugin 'terryma/vim-expand-region'
 Plugin 'bling/vim-airline'
 Plugin 'tommcdo/vim-exchange'
 Plugin 'mileszs/ack.vim'
+Plugin 'rking/ag.vim'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'Valloric/YouCompleteMe'
 
