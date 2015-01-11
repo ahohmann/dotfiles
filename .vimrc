@@ -52,7 +52,8 @@ set number
 set expandtab shiftwidth=2 softtabstop=2
 set hidden
 
-"Switch on incremental and highlighted search.
+"Switch on incremental and highlighted search and let the screen refresh (c-l)
+"remove the highlighting.
 set incsearch ignorecase smartcase hlsearch
 nnoremap <c-l> :noh<cr><c-l>
 
@@ -84,4 +85,9 @@ noremap <leader>jio :JavaImportOrganize<cr>
 noremap <leader>jgc :JavaConstructor<cr>
 noremap <leader>jgg :JavaGet<cr>
 noremap <leader>jgs :JavaGetSet<cr>
+
+"less aggressive update of instant markdown (I ran into situations where the
+"instant markdown server stalled the whole system).
+let g:instant_markdown_slow = 1
+
 
