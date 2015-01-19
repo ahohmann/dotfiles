@@ -27,15 +27,17 @@ Plugin 'mileszs/ack.vim'
 Plugin 'rking/ag.vim'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'Valloric/YouCompleteMe'
+Plugin 'christoomey/vim-tmux-navigator'
 
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
-let g:UltiSnipsExpandTrigger="<c-j>"
-let g:UltiSnipsJumpForwardTrigger="<c-j>"
-let g:UltiSnipsJumpBackwardTrigger="<c-k>"
+let g:UltiSnipsExpandTrigger="<leader>se>"
+let g:UltiSnipsJumpForwardTrigger="<leader>sj>"
+let g:UltiSnipsJumpBackwardTrigger="<leader>sk"
 let g:UltiSnipsEditSplit="vertical"
 
 noremap <leader>nt :NERDTree<cr>
+noremap <leader>nf :NERDTreeFind<cr>
 
 call vundle#end()
 filetype plugin indent on
@@ -52,10 +54,8 @@ set number
 set expandtab shiftwidth=2 softtabstop=2
 set hidden
 
-"Switch on incremental and highlighted search and let the screen refresh (c-l)
-"remove the highlighting.
 set incsearch ignorecase smartcase hlsearch
-nnoremap <c-l> :noh<cr><c-l>
+nnoremap <leader>r :noh<cr><c-l>
 
 "Highlight current line in current window.
 set cursorline
