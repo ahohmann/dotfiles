@@ -26,14 +26,19 @@ Plugin 'tommcdo/vim-exchange'
 Plugin 'mileszs/ack.vim'
 Plugin 'rking/ag.vim'
 Plugin 'altercation/vim-colors-solarized'
-Plugin 'Valloric/YouCompleteMe'
+"Plugin 'Valloric/YouCompleteMe'
 Plugin 'christoomey/vim-tmux-navigator'
-
+Plugin 'nelstrom/vim-qargs'
+Plugin 'kana/vim-textobj-user'
+Plugin 'kana/vim-textobj-entire'
+Plugin 'bkad/CamelCaseMotion'
+Plugin 'mtth/scratch.vim'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
-let g:UltiSnipsExpandTrigger="<leader>se>"
-let g:UltiSnipsJumpForwardTrigger="<leader>sj>"
-let g:UltiSnipsJumpBackwardTrigger="<leader>sk"
+
+let g:UltiSnipsExpandTrigger="<M-s>e>"
+let g:UltiSnipsJumpForwardTrigger="<M-s>j>"
+let g:UltiSnipsJumpBackwardTrigger="<M-s>k"
 let g:UltiSnipsEditSplit="vertical"
 
 noremap <leader>nt :NERDTree<cr>
@@ -55,7 +60,7 @@ set expandtab shiftwidth=2 softtabstop=2
 set hidden
 
 set incsearch ignorecase smartcase hlsearch
-nnoremap <leader>r :noh<cr><c-l>
+nnoremap <leader>h :noh<cr>
 
 "Highlight current line in current window.
 set cursorline
@@ -69,11 +74,16 @@ inoremap <C-S> <Esc>:w<CR>
 nnoremap <C-w>- <c-w>s
 nnoremap <C-w>\| <c-w>v
 
+"Reformat current paragraph.
 nnoremap <c-q> vipgq
 inoremap <c-q> <esc>vipgq
 
-nnoremap <leader>ev :edit $MYVIMRC<cr>
-nnoremap <leader>sv :source $MYVIMRC<cr>
+nnoremap <leader>ve :edit $MYVIMRC<cr>
+nnoremap <leader>vs :source $MYVIMRC<cr>
+
+"Let %% expand on the command line to the path of the active buffer (see
+"Practical Vim, Tip 41).
+cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
 
 "set statusline=%F[%{strlen(&fenc)?&fenc:'none'},%{&ff}]%h%m%r%y%=%c,%l/%L\ %P
 
